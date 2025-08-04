@@ -22,7 +22,7 @@ export const DataTable = ({ grupos, deleteEntry }: DataTableProps) => {
           <div className="bg-gray-800 rounded-xl shadow-2xl border border-gray-700 overflow-hidden">
             <div className="bg-gray-700 px-6 py-3 border-b border-gray-600">
               <h3 className="text-lg font-semibold text-white">
-                Fecha: {new Date(grupo.fecha).toLocaleDateString()}
+                Fecha: {grupo.fecha}
               </h3>
             </div>
             <div className="overflow-x-auto">
