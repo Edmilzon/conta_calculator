@@ -1,4 +1,4 @@
-import { Folio, LibroDiarioEntry, GrupoEntradas, FolioData, FolioConcepto } from "../types";
+import { LibroDiarioEntry, GrupoEntradas, FolioData, FolioConcepto } from "../types";
 
 const STORAGE_KEY = 'libro_diario_data';
 

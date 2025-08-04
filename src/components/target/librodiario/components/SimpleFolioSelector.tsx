@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import { Folio } from "../types";
+import { FolioConcepto } from "../types";
 import { FolioService } from "../services/folioService";
 
 interface SimpleFolioSelectorProps {
@@ -15,8 +15,8 @@ export const SimpleFolioSelector = ({
   placeholder = "Seleccionar folio..." 
 }: SimpleFolioSelectorProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [folios, setFolios] = useState<Folio[]>([]);
-  const [selectedFolio, setSelectedFolio] = useState<Folio | null>(null);
+  const [folios, setFolios] = useState<FolioConcepto[]>([]);
+  const [selectedFolio, setSelectedFolio] = useState<FolioConcepto | null>(null);
 
   const folioService = FolioService.getInstance();
 
@@ -30,9 +30,9 @@ export const SimpleFolioSelector = ({
     }
   }, [value, folioService]);
 
-  const handleSelect = (folio: Folio) => {
+  const handleSelect = (folio: FolioConcepto) => {
     setSelectedFolio(folio);
-    onChange(parseInt(folio.codigo));
+    onChange(folio.folio);
     setIsOpen(false);
   };
 
@@ -44,7 +44,7 @@ export const SimpleFolioSelector = ({
         className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-between"
       >
         <span className={selectedFolio ? "text-white" : "text-gray-400"}>
-          {selectedFolio ? `${selectedFolio.codigo} - ${selectedFolio.concepto}` : placeholder}
+          {selectedFolio ? `${selectedFolio.folio} - ${selectedFolio.concepto}` : placeholder}
         </span>
         <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
@@ -61,7 +61,7 @@ export const SimpleFolioSelector = ({
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="font-medium text-white">{folio.codigo}</div>
+                      <div className="font-medium text-white">{folio.folio}</div>
                       <div className="text-sm text-gray-300">{folio.concepto}</div>
                     </div>
                   </div>

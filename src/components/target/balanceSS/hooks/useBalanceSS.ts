@@ -43,7 +43,7 @@ export const useBalanceSS = () => {
     };
 
     loadData();
-  }, []);
+  }, [folioService]);
 
   const refreshData = () => {
     setLoading(true);

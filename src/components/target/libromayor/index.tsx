@@ -4,7 +4,7 @@ import { useLibroMayor } from "./hooks/useLibroMayor";
 import { Header } from "./components/Header";
 import { FolioGroup } from "./components/FolioGroup";
 import { BalanceSummary } from "./components/BalanceSummary";
-import { filtrarLibroMayorPorTipo, obtenerTiposDisponibles, LibroMayorData } from "../../../lib/math/libroMayor";
+import { filtrarLibroMayorPorTipo, obtenerTiposDisponibles } from "../../../lib/math/libroMayor";
 import { FolioConcepto } from "../librodiario/types";
 
 export default function LibroMayorComponent() {

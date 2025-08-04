@@ -39,7 +39,7 @@ export const useLibroMayor = () => {
     };
 
     loadData();
-  }, []);
+  }, [folioService]);
 
 
 

@@ -1,5 +1,4 @@
-import { LibroDiarioEntry } from "./libroDiario";
-import { FolioConcepto } from "../../components/target/librodiario/types";
+import { FolioConcepto, LibroDiarioEntry } from "../../components/target/librodiario/types";
 
 export interface BalanceSSEntry {
   folio: number;

@@ -57,7 +57,7 @@ export const LibroMayorTable = ({ entries }: LibroMayorTableProps) => {
             {entries.map((entry) => (
               <tr key={entry.folio} className="hover:bg-gray-700 transition-colors">
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  <div className="font-medium text-white">{entry.folioInfo.codigo}</div>
+                  <div className="font-medium text-white">{entry.folioInfo.folio}</div>
                 </td>
                 <td className="px-6 py-4 text-sm">
                   <div className="text-gray-300">{entry.folioInfo.concepto}</div>
